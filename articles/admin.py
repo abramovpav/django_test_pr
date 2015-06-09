@@ -22,5 +22,7 @@ class AdminArticle(admin.ModelAdmin):
             }
         )
     )
+    list_display = ('title', 'author', 'create_date')
+    list_display_links = ('title', 'author', 'create_date')
 
 admin.site.register(Article, AdminArticle)
