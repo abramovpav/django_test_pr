@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test_PR - Index</title>
+</head>
+<body>
+<h3>Articles</h3>
+{% for article in articles %}
+    <div class="article">
+        <div class="article_title">
+            <b>{{ article.title }}</b>
+        </div>
+        <div class="article_info">
+            {{ article.author }}
+        </div>
+        <div class="article_body">
+            {{ article.body }}
+        </div>
+    </div>
+{% endfor %}
+</body>
+</html>
