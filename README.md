@@ -1,1 +1,2 @@
-# django_test_pr
+# Test project on Django
+ *just for fun*
