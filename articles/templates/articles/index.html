@@ -3,21 +3,32 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Test_PR - Index</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-theme.min.css"/>
+    <script type="application/javascript" src="/static/jquery/jquery-2.1.4.min.js"></script>
+    <script type="application/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<h3>Articles</h3>
-{% for article in articles %}
-    <div class="article">
-        <div class="article_title">
-            <b>{{ article.title }}</b>
-        </div>
-        <div class="article_info">
-            {{ article.author }}
-        </div>
-        <div class="article_body">
-            {{ article.body }}
-        </div>
+<div class="row">
+    <div class="col-md-12">
+        <h1>Articles</h1>
+        {% for article in articles %}
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="/static/images/no_image_100x75.jpg" alt="no_image">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><b>{{ article.title }}</b> <i>{{ article.author }}</i></h4>
+
+                    {{ article.body }}
+                </div>
+            </div>
+        {% endfor %}
     </div>
-{% endfor %}
+</div>
+
 </body>
 </html>

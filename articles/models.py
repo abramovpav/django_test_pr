@@ -10,3 +10,4 @@ class Article(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
+    favorites = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='favorites_set')
