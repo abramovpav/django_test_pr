@@ -1,2 +1,4 @@
 *.pyc
 test_pr/local_settings.py
+client_src/bower_components/
+client_src/node_modules/
